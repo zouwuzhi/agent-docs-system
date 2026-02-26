@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 ## 文档规范
 
 项目使用统一的 Agent 文档规范，位于 `agent.md`。

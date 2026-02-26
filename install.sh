@@ -113,10 +113,11 @@ case "$TOOL" in
         done
         ;;
     antigravity)
-        append_if_missing "$TARGET_DIR/.antigravity/rules.md" "agent.md" "$REFERENCE_SNIPPET"
+        copy_file "$SCRIPT_DIR/adapters/antigravity/rules/agent-docs.md" \
+                  "$TARGET_DIR/.agents/rules/agent-docs.md"
         for wf in init wrap archive adr; do
             copy_file "$SCRIPT_DIR/adapters/antigravity/workflows/$wf.md" \
-                      "$TARGET_DIR/.agent/workflows/$wf.md"
+                      "$TARGET_DIR/.agents/workflows/$wf.md"
         done
         ;;
     cursor)

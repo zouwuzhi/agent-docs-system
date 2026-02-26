@@ -107,7 +107,7 @@ AI 会自动在适当时机更新热文件：
 | Claude Code | `.claude/commands/*.md` | `/command` | `CLAUDE.md` |
 | Gemini CLI | `.gemini/commands/*.toml` | `/command` | `GEMINI.md` |
 | OpenCode | `.opencode/commands/*.md` | `/command` | `AGENTS.md` |
-| Antigravity | `.agent/workflows/*.md` | `/workflow` | `.antigravity/rules.md` |
+| Antigravity | `.agents/workflows/*.md` | `/workflow` | `.agents/rules/*.md` |
 | Cursor | `.cursor/rules/*.mdc` | `@ruleName` | `.cursor/rules/*.mdc` |
 
 ## 设计原则

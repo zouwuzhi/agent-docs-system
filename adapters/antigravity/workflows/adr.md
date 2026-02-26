@@ -1,3 +1,7 @@
+---
+description: 创建架构决策记录 (ADR)
+---
+
 # 创建 ADR
 
 你是 ADR 创建助手。
