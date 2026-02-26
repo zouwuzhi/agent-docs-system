@@ -27,7 +27,7 @@ agent-docs-system 提供一套**热/冷分离文档体系**：
 
 ```bash
 # 克隆本仓库
-git clone https://github.com/user/agent-docs-system.git /tmp/agent-docs-system
+git clone https://github.com/zouwuzhi/agent-docs-system.git /tmp/agent-docs-system
 
 # 安装到当前项目（指定你使用的工具）
 bash /tmp/agent-docs-system/install.sh --tool claude
