@@ -35,6 +35,8 @@ bash /tmp/agent-docs-system/install.sh --tool claude
 
 其他工具替换 `claude` 为 `gemini`、`opencode`、`antigravity`、`cursor`。
 
+**Windows 用户：** 请使用 [Git Bash](https://git-scm.com/downloads) 运行上述命令。
+
 **可选参数：**
 
 ```bash
