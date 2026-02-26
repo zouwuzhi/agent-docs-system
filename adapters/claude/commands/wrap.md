@@ -7,25 +7,25 @@ description: 会话收尾检查：确认踩坑和决策已记录，context.md �
 ## Step 1: 检查踩坑
 
 回顾本次会话遇到的技术问题、环境问题、非显而易见的行为，逐一确认：
-- 是否已记录到 `.agent/gotchas.md`？
+- 是否已记录到 `.agents/gotchas.md`？
 - 未记录的立即追加（格式：`- **问题**: 解决方案/注意事项`）
 
 ## Step 2: 检查技术决策
 
 回顾本次会话做出的技术选型、方案选择，逐一确认：
-- 是否已记录到 `.agent/decisions.md`？
+- 是否已记录到 `.agents/decisions.md`？
 - 未记录的立即追加（格式：`## YYYY-MM-DD (主题)\n\n- **决策**: 原因`）
 
 ## Step 3: 更新 context.md
 
-读取 `.agent/context.md`，检查并更新：
+读取 `.agents/context.md`，检查并更新：
 - "正在进行"是否反映了本次会话的变化？
 - "待启动"是否需要调整？
 - 如有变化，立即更新
 
 ## Step 4: 检查热文件行数
 
-统计 `.agent/gotchas.md` 和 `.agent/decisions.md` 的行数。
+统计 `.agents/gotchas.md` 和 `.agents/decisions.md` 的行数。
 如果任一文件超过 100 行，提示用户运行 `/archive`。
 
 ## 输出确认

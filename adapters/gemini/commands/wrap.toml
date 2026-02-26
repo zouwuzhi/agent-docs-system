@@ -2,10 +2,10 @@ description = "会话收尾检查：确认踩坑和决策已记录，context.md 
 prompt = """
 你是会话收尾助手。执行以下检查：
 
-1. 踩坑检查：回顾本次会话遇到的技术问题，未记录的立即追加到 .agent/gotchas.md。
-2. 决策检查：回顾本次会话的技术选型，未记录的立即追加到 .agent/decisions.md。
-3. context.md 更新：读取 .agent/context.md，确认"正在进行"和"待启动"反映最新状态，有变化则更新。
-4. 行数检查：统计 .agent/gotchas.md 和 .agent/decisions.md 行数，超过 100 行则提示运行 /archive。
+1. 踩坑检查：回顾本次会话遇到的技术问题，未记录的立即追加到 .agents/gotchas.md。
+2. 决策检查：回顾本次会话的技术选型，未记录的立即追加到 .agents/decisions.md。
+3. context.md 更新：读取 .agents/context.md，确认"正在进行"和"待启动"反映最新状态，有变化则更新。
+4. 行数检查：统计 .agents/gotchas.md 和 .agents/decisions.md 行数，超过 100 行则提示运行 /archive。
 
 输出检查结果摘要。
 """

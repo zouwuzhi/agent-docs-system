@@ -6,7 +6,7 @@ alwaysApply: false
 
 你是文档归档助手。
 
-1. 分析：读取 .agent/gotchas.md（找已解决/低频条目）和 .agent/decisions.md（找 30 天前条目），展示建议归档列表，等待确认。
+1. 分析：读取 .agents/gotchas.md（找已解决/低频条目）和 .agents/decisions.md（找 30 天前条目），展示建议归档列表，等待确认。
 2. 归档 gotchas：确认条目移至 docs/knowledge/gotchas.md，从源文件删除。
 3. 归档 decisions：技术决策询问是否创建 ADR，日常记录追加到 docs/devlog/YYYY-MM-DD.md。
 4. 更新 docs/INDEX.md。

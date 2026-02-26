@@ -15,14 +15,14 @@ description: 初始化项目文档体系
 
 ## Step 2: 检查已有热文件
 
-检查 .agent/context.md、.agent/gotchas.md、.agent/decisions.md 是否存在且有内容。
+检查 .agents/context.md、.agents/gotchas.md、.agents/decisions.md 是否存在且有内容。
 存在非空文件则询问用户是否覆盖。
 
-## Step 3: 填写 .agent/context.md
+## Step 3: 填写 .agents/context.md
 
 根据扫描结果写入：当前阶段、技术栈、项目结构、正在进行、待启动。
 
-## Step 4: 初始化 .agent/gotchas.md 和 .agent/decisions.md
+## Step 4: 初始化 .agents/gotchas.md 和 .agents/decisions.md
 
 如果不存在，创建空白骨架。
 

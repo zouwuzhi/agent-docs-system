@@ -29,6 +29,6 @@ description: 创建架构决策记录 (ADR)
 ## Step 5: 更新索引
 
 在 docs/INDEX.md 的"技术决策 (ADR)"章节追加条目。
-在 .agent/decisions.md 追加一句摘要。
+在 .agents/decisions.md 追加一句摘要。
 
 输出确认摘要。

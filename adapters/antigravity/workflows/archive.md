@@ -8,11 +8,11 @@ description: 归档热文件到冷存储
 
 ## Step 1: 分析需要归档的内容
 
-读取 .agent/gotchas.md（找已解决/低频条目）和 .agent/decisions.md（找 30 天前条目），展示建议归档列表，等待用户确认。
+读取 .agents/gotchas.md（找已解决/低频条目）和 .agents/decisions.md（找 30 天前条目），展示建议归档列表，等待用户确认。
 
 ## Step 2: 归档 gotchas
 
-确认条目从 .agent/gotchas.md 移至 docs/knowledge/gotchas.md（不存在则创建），从源文件删除。
+确认条目从 .agents/gotchas.md 移至 docs/knowledge/gotchas.md（不存在则创建），从源文件删除。
 
 ## Step 3: 归档 decisions
 

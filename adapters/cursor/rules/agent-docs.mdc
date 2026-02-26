@@ -4,4 +4,4 @@ globs: []
 alwaysApply: true
 ---
 
-项目使用统一的 Agent 文档规范。请读取项目根目录的 `agent.md` 文件，按其中的新会话启动指令操作（依次读取 .agent/context.md、.agent/gotchas.md、.agent/decisions.md、docs/INDEX.md）。
+项目使用统一的 Agent 文档规范。请读取项目根目录的 `agent.md` 文件，按其中的新会话启动指令操作（依次读取 .agents/context.md、.agents/gotchas.md、.agents/decisions.md、docs/INDEX.md）。

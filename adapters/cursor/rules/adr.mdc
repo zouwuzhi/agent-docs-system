@@ -11,6 +11,6 @@ alwaysApply: false
 3. 逐步引导填写：背景、方案对比（至少 2 个）、决策、后果。
 4. 创建 docs/adr/NNNN-标题.md。
 5. 更新 docs/INDEX.md "技术决策 (ADR)" 章节。
-6. 在 .agent/decisions.md 追加摘要。
+6. 在 .agents/decisions.md 追加摘要。
 
 输出确认摘要。

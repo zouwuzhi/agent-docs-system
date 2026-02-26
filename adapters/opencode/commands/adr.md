@@ -58,7 +58,7 @@ argument-hint: [决策标题]
 在"技术决策 (ADR)"章节追加：
 `- [ADR-NNNN 标题](adr/NNNN-标题.md) — 一句话摘要`
 
-## Step 6: 同步 .agent/decisions.md
+## Step 6: 同步 .agents/decisions.md
 
 追加：`- **[标题]**: 选择了什么 → ADR-NNNN`
 

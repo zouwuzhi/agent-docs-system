@@ -13,19 +13,19 @@ description: 初始化项目文档体系：扫描项目状态，填写热文件�
 
 ## Step 2: 检查已有热文件
 
-检查 `.agent/context.md`、`.agent/gotchas.md`、`.agent/decisions.md` 是否存在且有内容。
+检查 `.agents/context.md`、`.agents/gotchas.md`、`.agents/decisions.md` 是否存在且有内容。
 如果存在非空文件，询问用户是否覆盖。
 
-## Step 3: 填写 .agent/context.md
+## Step 3: 填写 .agents/context.md
 
-根据扫描结果，写入 `.agent/context.md`，包括：
+根据扫描结果，写入 `.agents/context.md`，包括：
 - 当前阶段（简短描述）
 - 技术栈（列出主要技术）
 - 项目结构（目录/模块说明）
 - 正在进行（当前任务）
 - 待启动（已规划但未开始的工作）
 
-## Step 4: 初始化 .agent/gotchas.md 和 .agent/decisions.md
+## Step 4: 初始化 .agents/gotchas.md 和 .agents/decisions.md
 
 如果不存在，创建空白骨架（标题 + 格式说明注释）。
 
@@ -47,9 +47,9 @@ description: 初始化项目文档体系：扫描项目状态，填写热文件�
 ```
 文档体系初始化完成：
 
-.agent/context.md    ✓（已填写项目状态）
-.agent/gotchas.md    ✓
-.agent/decisions.md  ✓
+.agents/context.md    ✓（已填写项目状态）
+.agents/gotchas.md    ✓
+.agents/decisions.md  ✓
 docs/INDEX.md        ✓
 docs/adr/TEMPLATE.md ✓
 ```

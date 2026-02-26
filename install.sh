@@ -71,9 +71,9 @@ echo ""
 copy_file "$SCRIPT_DIR/agent.md" "$TARGET_DIR/agent.md"
 
 # 2. hot files
-copy_file "$SCRIPT_DIR/templates/context.md"   "$TARGET_DIR/.agent/context.md"
-copy_file "$SCRIPT_DIR/templates/gotchas.md"   "$TARGET_DIR/.agent/gotchas.md"
-copy_file "$SCRIPT_DIR/templates/decisions.md" "$TARGET_DIR/.agent/decisions.md"
+copy_file "$SCRIPT_DIR/templates/context.md"   "$TARGET_DIR/.agents/context.md"
+copy_file "$SCRIPT_DIR/templates/gotchas.md"   "$TARGET_DIR/.agents/gotchas.md"
+copy_file "$SCRIPT_DIR/templates/decisions.md" "$TARGET_DIR/.agents/decisions.md"
 
 # 3. cold files
 copy_file "$SCRIPT_DIR/templates/docs-INDEX.md"   "$TARGET_DIR/docs/INDEX.md"
