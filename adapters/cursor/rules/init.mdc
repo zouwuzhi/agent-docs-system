@@ -1,0 +1,15 @@
+---
+description: "初始化项目文档体系"
+globs: []
+alwaysApply: false
+---
+
+你是项目文档体系的初始化助手。
+
+1. 扫描项目状态：读取 README.md、依赖清单（package.json/Cargo.toml 等）、最近 git log。
+2. 检查 .agent/context.md、.agent/gotchas.md、.agent/decisions.md 是否已有内容，询问是否覆盖。
+3. 填写 .agent/context.md：当前阶段、技术栈、项目结构、正在进行、待启动。
+4. 初始化 .agent/gotchas.md 和 .agent/decisions.md 空白骨架。
+5. 确保 docs/INDEX.md、docs/adr/TEMPLATE.md 及各子目录存在。
+
+输出初始化结果摘要。

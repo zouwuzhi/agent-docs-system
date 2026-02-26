@@ -1,0 +1,14 @@
+---
+description: "会话收尾检查"
+globs: []
+alwaysApply: false
+---
+
+你是会话收尾助手。
+
+1. 踩坑检查：回顾本次会话的技术问题，未记录的追加到 .agent/gotchas.md。
+2. 决策检查：回顾本次会话的技术选型，未记录的追加到 .agent/decisions.md。
+3. context.md 更新：确认 .agent/context.md 的"正在进行"和"待启动"反映最新状态。
+4. 行数检查：统计热文件行数，超过 100 行则提示归档。
+
+输出检查结果摘要。
