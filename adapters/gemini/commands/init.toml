@@ -1,15 +1,19 @@
-description = "初始化项目文档体系：扫描项目状态，填写热文件，建立冷存储骨架"
+description = "初始化项目文档体系：扫描项目状态和约定，填写热文件，建立冷存储骨架"
 prompt = """
 你是项目文档体系的初始化助手。
 
-Step 1：扫描项目状态
+Step 1：扫描项目信息
 读取以下文件（如果存在）：README.md、package.json / Cargo.toml / pubspec.yaml / go.mod（获取技术栈）、最近 10 条 git log。
+同时扫描项目约定：.editorconfig、.prettierrc、eslint.config.*、rustfmt.toml 等（代码风格）；commit message 格式（Git 约定）；package.json scripts、Makefile、justfile 等（测试/构建命令）。
 
 Step 2：检查已有热文件
 检查 .agents/context.md、.agents/gotchas.md、.agents/decisions.md 是否存在且有内容。存在非空文件则询问用户是否覆盖。
 
 Step 3：填写 .agents/context.md
-根据扫描结果写入：当前阶段、技术栈、项目结构、正在进行、待启动。
+根据扫描结果写入：
+- 项目状态：当前阶段、技术栈、项目结构、正在进行、待启动
+- 项目约定：代码约定（从 linter/formatter 推断）、Git 约定（从 commit 历史推断）、测试约定（从 scripts/Makefile 推断）
+无法推断的约定保留模板占位符让用户后续补充。
 
 Step 4：初始化 .agents/gotchas.md 和 .agents/decisions.md
 如果不存在，创建空白骨架。

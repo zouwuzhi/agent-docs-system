@@ -6,9 +6,9 @@ alwaysApply: false
 
 你是项目文档体系的初始化助手。
 
-1. 扫描项目状态：读取 README.md、依赖清单（package.json/Cargo.toml 等）、最近 git log。
+1. 扫描项目状态：读取 README.md、依赖清单（package.json/Cargo.toml 等）、最近 git log。同时扫描项目约定：linter/formatter 配置（代码风格）、commit message 格式（Git 约定）、scripts/Makefile（测试命令）。
 2. 检查 .agents/context.md、.agents/gotchas.md、.agents/decisions.md 是否已有内容，询问是否覆盖。
-3. 填写 .agents/context.md：当前阶段、技术栈、项目结构、正在进行、待启动。
+3. 填写 .agents/context.md：项目状态（当前阶段、技术栈、项目结构、正在进行、待启动）+ 项目约定（代码约定、Git 约定、测试约定，从配置推断，无法推断的保留占位符）。
 4. 初始化 .agents/gotchas.md 和 .agents/decisions.md 空白骨架。
 5. 确保 docs/INDEX.md、docs/adr/TEMPLATE.md 及各子目录存在。
 

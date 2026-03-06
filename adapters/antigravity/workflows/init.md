@@ -13,6 +13,8 @@ description: 初始化项目文档体系
 - package.json / Cargo.toml / pubspec.yaml / go.mod 等（获取技术栈）
 - 最近 10 条 git log
 
+同时扫描项目约定：.editorconfig、.prettierrc、eslint.config.*、rustfmt.toml 等（代码风格）；commit message 格式（Git 约定）；package.json scripts、Makefile、justfile 等（测试/构建命令）。
+
 ## Step 2: 检查已有热文件
 
 检查 .agents/context.md、.agents/gotchas.md、.agents/decisions.md 是否存在且有内容。
@@ -20,7 +22,7 @@ description: 初始化项目文档体系
 
 ## Step 3: 填写 .agents/context.md
 
-根据扫描结果写入：当前阶段、技术栈、项目结构、正在进行、待启动。
+根据扫描结果写入：项目状态（当前阶段、技术栈、项目结构、正在进行、待启动）和项目约定（代码约定、Git 约定、测试约定，从配置文件和 commit 历史推断，无法推断的保留占位符）。
 
 ## Step 4: 初始化 .agents/gotchas.md 和 .agents/decisions.md
 
