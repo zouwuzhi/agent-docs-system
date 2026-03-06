@@ -86,8 +86,8 @@
 - **新增 docs/ 下任何文件时，必须同步更新 `docs/INDEX.md` 中对应目录的数量和最近更新**
 - 重要技术决策 → 新增 ADR（`docs/adr/NNNN-标题.md`，编号递增）
 - 每次会话结束 → 新增 devlog（`docs/devlog/YYYY-MM-DD-N-简短主题.md`，N 为当天会话序号）
+  - 标题 + 扁平条目列表，不分章节，每条自带上下文
   - 涉及已有冷存储文档的条目：一句话描述 + 链接（渐进式披露）
-  - 无对应文档的条目：正常记录细节
 - 技术调研/方案对比 → 新增 research（`docs/research/YYYY-MM-DD-主题.md`），记录调研背景、对比的方案、结论
 - 深入理解模块/系统 → 新增或更新 knowledge（`docs/knowledge/模块名.md`），记录工作原理、关键流程、注意事项
 - 制定实施计划 → 新增 plans（`docs/plans/YYYY-MM-DD-主题.md`），记录目标、步骤、预期产出
