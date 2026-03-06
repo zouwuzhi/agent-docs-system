@@ -40,7 +40,8 @@ bash /tmp/agent-docs-system/install.sh --tool claude
 **可选参数：**
 
 ```bash
---force          # 覆盖已存在的文件
+--force          # 覆盖已存在的文件（全量重装）
+--upgrade        # 升级：覆盖系统文件，清理废弃命令，保留用户内容
 --target <dir>   # 安装到指定目录（默认为当前目录）
 ```
 
