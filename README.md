@@ -6,10 +6,10 @@
 
 当你用 AI agent（Claude Code、Gemini CLI、Cursor 等）开发项目时，agent 每次新会话都需要重新了解项目状态。
 
-agent-docs-system 提供一套**热/冷分离文档体系**：
-- **热文件**（`.agents/`）：每次会话必读，保持项目状态、踩坑、决策的实时快照
-- **冷文件**（`docs/`）：归档知识，通过索引按需访问
-- **agent.md**：告诉 AI 在每次新会话开始时读什么、怎么维护文档
+agent-docs-system 提供一套**AI agent 操作手册 + 热/冷分离文档体系**：
+- **agent.md**：agent 的操作手册——行为准则、文档维护规则、质量策略
+- **热文件**（`.agents/`）：每次会话必读，包含项目状态、项目约定、活跃踩坑和决策
+- **冷文件**（`docs/`）：通过索引按需访问，包含开发日志、技术调研、模块知识、实施计划等
 
 ## 支持的工具
 
@@ -49,10 +49,10 @@ bash /tmp/agent-docs-system/install.sh --tool claude
 
 ```
 your-project/
-├── agent.md                    ← 文档规范（所有工具共享）
+├── agent.md                    ← agent 操作手册（行为准则 + 文档规则）
 ├── CLAUDE.md                   ← 追加了引用 agent.md 的段落
 ├── .agents/
-│   ├── context.md              ← 项目状态快照（每次会话必读）
+│   ├── context.md              ← 项目状态 + 项目约定（每次会话必读）
 │   ├── gotchas.md              ← 活跃踩坑记录
 │   └── decisions.md            ← 近期技术决策
 ├── .claude/commands/           ← Claude Code 命令（仅 --tool claude）
@@ -73,36 +73,35 @@ your-project/
 
 ### 首次安装后
 
-运行 `/init`（或 `@init`）让 AI 扫描你的项目，填写 `.agents/context.md`。
+运行 `/init`（或 `@init`）让 AI 扫描你的项目，自动填写项目状态和项目约定到 `.agents/context.md`。
 
 ### 日常开发中
 
-AI 会自动在适当时机更新热文件：
-- 踩到新坑 → 追加到 `.agents/gotchas.md`
-- 做出技术决策 → 追加到 `.agents/decisions.md`
+AI 会自动在适当时机维护文档：
+- 踩到高价值的坑 → 追加到 `.agents/gotchas.md`
+- 做出重要技术决策 → 追加到 `.agents/decisions.md`
 - 完成功能模块 → 更新 `.agents/context.md`
+- 做了技术调研 → 写入 `docs/research/`
+- 深入理解了模块 → 写入 `docs/knowledge/`
+- 制定了实施计划 → 写入 `docs/plans/`
 
 ### 会话结束时
 
 运行 `/wrap` 让 AI 做收尾检查，生成开发日志到 `docs/devlog/`。
 
-### 热文件超过 100 行时
+### 定期检查文档健康
 
-运行 `/doc-review` 检查文档健康状态，清理不再相关的内容。
+运行 `/doc-review` 清理热文件中不再相关的内容，检查冷存储是否过期、INDEX.md 是否有死链接。
 
 ### 记录重要架构决策时
 
 运行 `/adr [决策标题]` 创建 ADR 文档。
 
-### 定期检查文档健康
-
-运行 `/doc-review` 检查冷存储文档是否过期、INDEX.md 是否有死链接。
-
 ## 4 个核心命令
 
 | 命令 | 功能 |
 |------|------|
-| `init` | 初始化文档体系，扫描项目填写 context.md |
+| `init` | 初始化文档体系，扫描项目自动填写状态和约定 |
 | `wrap` | 会话收尾，更新热文件并生成开发日志 |
 | `adr` | 创建架构决策记录（ADR） |
 | `doc-review` | 检查热文件和冷存储健康状态，清理过期文档 |
@@ -121,6 +120,7 @@ AI 会自动在适当时机更新热文件：
 
 - **SSOT**：`agent.md` 是所有规范的唯一来源，各工具指令文件只加一句引用
 - **热/冷分离**：频繁更新的上下文（`.agents/`）与归档知识（`docs/`）分开
+- **渐进式披露**：devlog 串联所有文档，一句话摘要 + 链接，按需深入
 - **工具中立**：核心规范不依赖任何特定 AI 工具
 - **幂等安装**：重复运行 install.sh 不会覆盖已有文件或重复追加内容
 
