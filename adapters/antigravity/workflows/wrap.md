@@ -40,8 +40,4 @@ description: 会话收尾检查
 
 如有新增文件，同步更新 docs/INDEX.md。
 
-## Step 6: 检查热文件行数
-
-统计 .agents/gotchas.md 和 .agents/decisions.md 行数，超过 100 行则提示用户归档。
-
 输出检查结果摘要。

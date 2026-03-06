@@ -16,8 +16,8 @@
 | 文件 | 用途 | 更新方式 |
 |------|------|----------|
 | `.agents/context.md` | 项目当前状态快照 | 覆盖更新（始终保持最新） |
-| `.agents/gotchas.md` | 活跃踩坑记录 | 追加，>100 行归档 |
-| `.agents/decisions.md` | 近期技术决策 | 追加，>100 行归档 |
+| `.agents/gotchas.md` | 活跃踩坑记录 | 追加，定期通过 doc-review 清理 |
+| `.agents/decisions.md` | 近期技术决策 | 追加，定期通过 doc-review 清理 |
 
 **冷文件**（`docs/` 目录，按需通过 INDEX.md 索引访问）：
 - `docs/adr/` — 技术决策记录（ADR）
@@ -60,14 +60,6 @@
 - 检查 `.agents/context.md` 是否反映了最新状态
 - 生成开发日志 `docs/devlog/YYYY-MM-DD-N-简短主题.md`
 - 兜底检查：本次会话是否做过技术调研、深入理解模块、制定计划但未落盘
-- 检查热文件是否超过 100 行，超过则执行归档
-
-## 归档规则
-
-当热文件超过 100 行时：
-- `.agents/gotchas.md` → 已解决/低频条目移至 `docs/knowledge/gotchas.md`
-- `.agents/decisions.md` → 30 天前的条目移至对应 ADR 或 devlog
-- 归档后同步更新 `docs/INDEX.md`（如有新文件）
 
 ## 冷文件更新规则
 
@@ -83,7 +75,14 @@
 
 ## 文档健康检查
 
-定期运行 `doc-review` 命令检查冷存储文档的健康状态：
+定期运行 `doc-review` 命令检查文档的健康状态：
+
+**热文件：**
+- `.agents/gotchas.md` — 引用的文件/库/模块是否仍存在，不再相关的归档到 `docs/knowledge/` 或删除
+- `.agents/decisions.md` — 超过 30 天的决策归档（移至对应 devlog 或升级为 ADR）
+- `.agents/context.md` — 对比最近 devlog，检查"正在进行"和"待启动"是否一致
+
+**冷存储：**
 - `docs/knowledge/` — 检查文档引用的源码是否已大幅变更或删除
 - `docs/plans/` — 检查计划目标是否已完成，已完成则标记 `> 状态：已完成（YYYY-MM-DD）`
 - `docs/INDEX.md` — 检查死链接和未收录文件

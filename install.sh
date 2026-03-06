@@ -93,21 +93,21 @@ echo "Installing $TOOL adapter..."
 case "$TOOL" in
     claude)
         append_if_missing "$TARGET_DIR/CLAUDE.md" "agent.md" "$REFERENCE_SNIPPET"
-        for cmd in init wrap archive adr doc-review; do
+        for cmd in init wrap adr doc-review; do
             copy_file "$SCRIPT_DIR/adapters/claude/commands/$cmd.md" \
                       "$TARGET_DIR/.claude/commands/$cmd.md"
         done
         ;;
     gemini)
         append_if_missing "$TARGET_DIR/GEMINI.md" "agent.md" "$REFERENCE_SNIPPET"
-        for cmd in init wrap archive adr doc-review; do
+        for cmd in init wrap adr doc-review; do
             copy_file "$SCRIPT_DIR/adapters/gemini/commands/$cmd.toml" \
                       "$TARGET_DIR/.gemini/commands/$cmd.toml"
         done
         ;;
     opencode)
         append_if_missing "$TARGET_DIR/AGENTS.md" "agent.md" "$REFERENCE_SNIPPET"
-        for cmd in init wrap archive adr doc-review; do
+        for cmd in init wrap adr doc-review; do
             copy_file "$SCRIPT_DIR/adapters/opencode/commands/$cmd.md" \
                       "$TARGET_DIR/.opencode/commands/$cmd.md"
         done
@@ -115,13 +115,13 @@ case "$TOOL" in
     antigravity)
         copy_file "$SCRIPT_DIR/adapters/antigravity/rules/agent-docs.md" \
                   "$TARGET_DIR/.agents/rules/agent-docs.md"
-        for wf in init wrap archive adr doc-review; do
+        for wf in init wrap adr doc-review; do
             copy_file "$SCRIPT_DIR/adapters/antigravity/workflows/$wf.md" \
                       "$TARGET_DIR/.agents/workflows/$wf.md"
         done
         ;;
     cursor)
-        for rule in agent-docs init wrap archive adr doc-review; do
+        for rule in agent-docs init wrap adr doc-review; do
             copy_file "$SCRIPT_DIR/adapters/cursor/rules/$rule.mdc" \
                       "$TARGET_DIR/.cursor/rules/$rule.mdc"
         done
