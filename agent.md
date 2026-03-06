@@ -7,7 +7,7 @@
 2. `.agents/context.md`（项目状态 + 项目约定）
 3. `.agents/gotchas.md`（活跃踩坑）
 4. `.agents/decisions.md`（近期决策）
-5. `docs/INDEX.md`（冷存储索引，按需深入）
+5. `docs/INDEX.md`（冷存储概览，了解各目录文档数量和最近更新）
 
 ## 任务执行策略
 
@@ -83,7 +83,7 @@
 
 ## 冷文件更新规则
 
-- **新增 docs/ 下任何文件时，必须同步更新 `docs/INDEX.md`**
+- **新增 docs/ 下任何文件时，必须同步更新 `docs/INDEX.md` 中对应目录的数量和最近更新**
 - 重要技术决策 → 新增 ADR（`docs/adr/NNNN-标题.md`，编号递增）
 - 每次会话结束 → 新增 devlog（`docs/devlog/YYYY-MM-DD-N-简短主题.md`，N 为当天会话序号）
   - 涉及已有冷存储文档的条目：一句话描述 + 链接（渐进式披露）
@@ -105,7 +105,7 @@
 **冷存储：**
 - `docs/knowledge/` — 检查文档引用的源码是否已大幅变更或删除
 - `docs/plans/` — 检查计划目标是否已完成，已完成则标记 `> 状态：已完成（YYYY-MM-DD）`
-- `docs/INDEX.md` — 检查死链接和未收录文件
+- `docs/INDEX.md` — 检查数量和最近更新是否与实际文件一致
 
 ## ADR 规则
 
