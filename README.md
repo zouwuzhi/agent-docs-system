@@ -15,11 +15,11 @@ agent-docs-system 提供一套**热/冷分离文档体系**：
 
 | 工具 | 命令触发方式 |
 |------|------------|
-| [Claude Code](https://claude.ai/code) | `/init`、`/wrap`、`/archive`、`/adr` |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | `/init`、`/wrap`、`/archive`、`/adr` |
-| [OpenCode](https://github.com/opencode-ai/opencode) | `/init`、`/wrap`、`/archive`、`/adr` |
-| [Antigravity](https://antigravity.google) | `/init`、`/wrap`、`/archive`、`/adr` |
-| [Cursor](https://cursor.com) | `@init`、`@wrap`、`@archive`、`@adr` |
+| [Claude Code](https://claude.ai/code) | `/init`、`/wrap`、`/archive`、`/adr`、`/doc-review` |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | `/init`、`/wrap`、`/archive`、`/adr`、`/doc-review` |
+| [OpenCode](https://github.com/opencode-ai/opencode) | `/init`、`/wrap`、`/archive`、`/adr`、`/doc-review` |
+| [Antigravity](https://antigravity.google) | `/init`、`/wrap`、`/archive`、`/adr`、`/doc-review` |
+| [Cursor](https://cursor.com) | `@init`、`@wrap`、`@archive`、`@adr`、`@doc-review` |
 
 ## 安装
 
@@ -58,7 +58,8 @@ your-project/
 │   ├── init.md
 │   ├── wrap.md
 │   ├── archive.md
-│   └── adr.md
+│   ├── adr.md
+│   └── doc-review.md
 └── docs/
     ├── INDEX.md                ← 冷存储索引
     ├── adr/TEMPLATE.md
@@ -93,7 +94,11 @@ AI 会自动在适当时机更新热文件：
 
 运行 `/adr [决策标题]` 创建 ADR 文档。
 
-## 4 个核心命令
+### 定期检查文档健康
+
+运行 `/doc-review` 检查冷存储文档是否过期、INDEX.md 是否有死链接。
+
+## 5 个核心命令
 
 | 命令 | 功能 |
 |------|------|
@@ -101,6 +106,7 @@ AI 会自动在适当时机更新热文件：
 | `wrap` | 会话收尾，更新热文件并生成开发日志 |
 | `archive` | 归档超量热文件到 docs/ 冷存储 |
 | `adr` | 创建架构决策记录（ADR） |
+| `doc-review` | 检查冷存储文档健康状态，发现过期和失效文档 |
 
 ## 工具适配对比
 

@@ -1,0 +1,13 @@
+---
+description: "文档健康检查：扫描冷存储，发现过期文档"
+globs: []
+alwaysApply: false
+---
+
+你是文档健康检查助手。
+
+1. 扫描 knowledge：检查 docs/knowledge/ 中文档引用的源码是否仍存在、是否有大量新提交（>10次）。标记可能过期的文档。
+2. 扫描 plans：检查 docs/plans/ 中计划是否已完成（对比 .agents/context.md），已完成但未标记的建议标记。
+3. 验证 INDEX.md：检查链接有效性，检查是否有未收录的 docs/ 文件。
+4. 生成报告：输出可能过期的 knowledge、建议标记完成的 plans、INDEX.md 问题。
+5. 用户确认后执行：更新过期 knowledge、标记已完成 plans（添加 > 状态：已完成（YYYY-MM-DD））、修复 INDEX.md。
