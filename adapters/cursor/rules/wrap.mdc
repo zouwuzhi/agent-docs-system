@@ -8,8 +8,8 @@ alwaysApply: false
 
 1. 踩坑检查：回顾本次会话的技术问题，未记录的追加到 .agents/gotchas.md。
 2. 决策检查：回顾本次会话的技术选型，未记录的追加到 .agents/decisions.md。
-3. context.md 更新：确认 .agents/context.md 的"正在进行"和"待启动"反映最新状态。
-4. 生成开发日志：生成 docs/devlog/YYYY-MM-DD-N-简短主题.md。必选章节：完成的工作、关键变更。可选章节（有内容才添加）：遇到的问题、下次继续。涉及已有冷存储文档的条目用一句话 + 链接。N 为当天会话序号。同步更新 docs/INDEX.md。
+3. 生成开发日志：生成 docs/devlog/YYYY-MM-DD-N-简短主题.md。必选章节：完成的工作、关键变更。可选章节（有内容才添加）：遇到的问题、下次继续。涉及已有冷存储文档的条目用一句话 + 链接。N 为当天会话序号。同步更新 docs/INDEX.md。
+4. 更新 context.md：确认"正在进行"和"待启动"反映最新状态。如有未完成的工作，"正在进行"条目附上本次 devlog 链接（格式：- 任务描述 → [上次会话](docs/devlog/...)），方便下次会话接续。
 5. 兜底检查冷存储：检查本次会话是否做过技术调研（→ docs/research/）、深入理解模块（→ docs/knowledge/）、制定计划（→ docs/plans/）但未落盘，如有则补写。新增文件同步更新 docs/INDEX.md。
 
 输出检查结果摘要。

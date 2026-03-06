@@ -14,14 +14,7 @@ prompt = """
 - 是否已记录到 .agents/decisions.md？
 - 未记录的立即追加（格式：## YYYY-MM-DD (主题)  - **决策**: 原因）
 
-## Step 3: 更新 context.md
-
-读取 .agents/context.md，检查并更新：
-- "正在进行"是否反映了本次会话的变化？
-- "待启动"是否需要调整？
-- 如有变化，立即更新
-
-## Step 4: 生成开发日志
+## Step 3: 生成开发日志
 
 回顾本次会话的完整工作内容，生成一份 devlog 文件。
 
@@ -50,6 +43,14 @@ prompt = """
 
 同步更新 docs/INDEX.md：在"开发日志"章节追加新文件的链接。
 
+## Step 4: 更新 context.md
+
+读取 .agents/context.md，检查并更新：
+- "正在进行"是否反映了本次会话的变化？
+- "待启动"是否需要调整？
+- 如有未完成的工作，"正在进行"条目附上本次 devlog 链接，方便下次会话接续。格式：- 任务描述 → [上次会话](docs/devlog/YYYY-MM-DD-N-主题.md)
+- 如有变化，立即更新
+
 ## Step 5: 兜底检查冷存储
 
 回顾本次会话，检查是否有以下内容产生但未落盘：
@@ -66,7 +67,7 @@ prompt = """
 
 踩坑     （N 条新增 / 无变化）
 决策     （N 条新增 / 无变化）
-context  （已更新 / 无变化）
 devlog   docs/devlog/YYYY-MM-DD-N-主题.md
+context  （已更新 / 无变化）
 冷存储   （research/knowledge/plans 新增 N 篇 / 无新增）
 """
