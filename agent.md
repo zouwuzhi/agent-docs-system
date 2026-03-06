@@ -35,6 +35,9 @@
 |------|----------|
 | 踩到新坑 / 发现新陷阱 | `.agents/gotchas.md` 追加 |
 | 做出技术决策（选型、方案选择等） | `.agents/decisions.md` 追加 |
+| 对比了多个技术方案或库 | 写入 `docs/research/YYYY-MM-DD-主题.md` |
+| 深入理解了某个模块/系统的工作原理 | 写入 `docs/knowledge/模块名.md` |
+| 制定了多步骤的实施计划 | 写入 `docs/plans/YYYY-MM-DD-主题.md` |
 
 **里程碑触发（阶段性变化时）：**
 
@@ -47,6 +50,8 @@
 **会话结束时（收尾检查）：**
 - 检查本次会话是否有未记录的踩坑或决策
 - 检查 `.agents/context.md` 是否反映了最新状态
+- 生成开发日志 `docs/devlog/YYYY-MM-DD-N-简短主题.md`
+- 兜底检查：本次会话是否做过技术调研、深入理解模块、制定计划但未落盘
 - 检查热文件是否超过 100 行，超过则执行归档
 
 ## 归档规则
@@ -60,9 +65,11 @@
 
 - **新增 docs/ 下任何文件时，必须同步更新 `docs/INDEX.md`**
 - 重要技术决策 → 新增 ADR（`docs/adr/NNNN-标题.md`，编号递增）
-- 每日开发结束 → 更新或新增 devlog（`docs/devlog/YYYY-MM-DD.md`）
+- 每次会话结束 → 新增 devlog（`docs/devlog/YYYY-MM-DD-N-简短主题.md`，N 为当天会话序号）
+- 技术调研/方案对比 → 新增 research（`docs/research/YYYY-MM-DD-主题.md`），记录调研背景、对比的方案、结论
+- 深入理解模块/系统 → 新增或更新 knowledge（`docs/knowledge/模块名.md`），记录工作原理、关键流程、注意事项
+- 制定实施计划 → 新增 plans（`docs/plans/YYYY-MM-DD-主题.md`），记录目标、步骤、预期产出
 - 遇到重大 bug/故障 → 新增 postmortem（`docs/postmortem/NNNN-标题.md`）
-- 技术调研产出 → 新增 research（`docs/research/YYYY-MM-DD-主题.md`）
 
 ## ADR 规则
 

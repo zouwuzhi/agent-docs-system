@@ -2,7 +2,7 @@
 description: 会话收尾检查
 ---
 
-# 会话收尾检查
+# 会话收尾：更新热文件，生成开发日志
 
 你是会话收尾助手。
 
@@ -18,7 +18,29 @@ description: 会话收尾检查
 
 读取 .agents/context.md，确认"正在进行"和"待启动"反映最新状态，有变化则更新。
 
-## Step 4: 检查热文件行数
+## Step 4: 生成开发日志
+
+回顾本次会话的完整工作内容，生成一份 devlog 文件。
+
+文件命名：docs/devlog/YYYY-MM-DD-N-简短主题.md
+- YYYY-MM-DD 为当天日期
+- N 为当天的会话序号（查看 docs/devlog/ 下同日期前缀的文件数量 +1）
+- 简短主题 用几个关键词概括本次会话的核心工作
+
+文件内容包含：完成的工作、关键变更、遇到的问题、下次继续。
+同步更新 docs/INDEX.md。
+
+## Step 5: 兜底检查冷存储
+
+回顾本次会话，检查是否有以下内容产生但未落盘：
+
+- 技术调研（对比了多个方案/库）→ 写入 docs/research/YYYY-MM-DD-主题.md
+- 模块理解（深入分析了某个模块/系统）→ 写入 docs/knowledge/模块名.md
+- 实施计划（制定了多步骤开发计划）→ 写入 docs/plans/YYYY-MM-DD-主题.md
+
+如有新增文件，同步更新 docs/INDEX.md。
+
+## Step 6: 检查热文件行数
 
 统计 .agents/gotchas.md 和 .agents/decisions.md 行数，超过 100 行则提示用户归档。
 

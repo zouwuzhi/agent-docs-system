@@ -1,5 +1,5 @@
 ---
-description: "会话收尾检查"
+description: "会话收尾：更新热文件，生成开发日志"
 globs: []
 alwaysApply: false
 ---
@@ -9,6 +9,8 @@ alwaysApply: false
 1. 踩坑检查：回顾本次会话的技术问题，未记录的追加到 .agents/gotchas.md。
 2. 决策检查：回顾本次会话的技术选型，未记录的追加到 .agents/decisions.md。
 3. context.md 更新：确认 .agents/context.md 的"正在进行"和"待启动"反映最新状态。
-4. 行数检查：统计热文件行数，超过 100 行则提示归档。
+4. 生成开发日志：生成 docs/devlog/YYYY-MM-DD-N-简短主题.md，记录本次会话的完成工作、关键变更、遇到的问题、下次继续。N 为当天会话序号。同步更新 docs/INDEX.md。
+5. 兜底检查冷存储：检查本次会话是否做过技术调研（→ docs/research/）、深入理解模块（→ docs/knowledge/）、制定计划（→ docs/plans/）但未落盘，如有则补写。新增文件同步更新 docs/INDEX.md。
+6. 行数检查：统计热文件行数，超过 100 行则提示归档。
 
 输出检查结果摘要。
